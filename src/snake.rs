@@ -97,7 +97,7 @@ impl Snake {
             }
         };
 
-        self.body.push_back(new_block);
+        self.body.push_front(new_block);
         let removed_block = self.body.pop_back().unwrap();
         self.tail = Some(removed_block);
     }
